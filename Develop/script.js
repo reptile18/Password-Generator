@@ -79,25 +79,7 @@ function generatePasswordInner(passwordLength,includeLower,includeUpper,includeN
 
   for (passwordIndex = 0; passwordIndex < passwordLength; passwordIndex++) {
     characterType = randomInt(1,sumIncludes(includeLower,includeUpper,includeNumeric,includeSpecial));
-    //alert("characterType: " + characterType)
     passwordString += functionMap[characterType]();
-
-    /*
-    if (characterType === 1 && includeLower === true) {
-
-    }
-    else if (characterType === 2 && includeUpper === true) {
-
-    }
-    else if (characterType === 3 && includeNumeric === true) {
-
-    }
-    else if (characterType === 4 && includeSpecial === true) {
-
-    }
-    else { // selected an invalid type
-
-    }*/
   }
   return passwordString;
 }
