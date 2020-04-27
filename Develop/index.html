@@ -1,34 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Password Generator</h1>
-      </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
-        </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">-->
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Password Generator</h1>
+    </header>
+    <div class="card">
+      <div class="card-header">
+        <h2>Generate a Password</h2>
+      </div>
+      <div class="card-body">
+        <form class="form-group">
+          <div class="divPasswordLength">
+            <label for="inputPasswordLength">Password length: </label>
+            <input class="form-control" id="inputPasswordLength" type="number" min="8" max="128" value="8">
+          </div>
+          <div class="divPasswordOptions">
+            <label class="">Options: </label>
+            <div class="form-check">
+              <input class="form-check-input" id="checkIncludeUpper" type="checkbox"
+                aria-label="include uppercase letters checkbox">
+              <label class="form-check-label" for="checkIncludeUpper">Include uppercase
+                letters</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" id="checkIncludeLower" type="checkbox"
+                aria-label="include lowercase letters checkbox">
+              <label class="form-check-label" for="checkIncludeLower">Include lowercase
+                letters</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" id="checkIncludeNumeric" type="checkbox"
+                aria-label="include numbers checkbox">
+              <label class="form-check-label" for="checkIncludeNumeric">Include numbers</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" id="checkIncludeSpecial" type="checkbox"
+                aria-label="include special characters checkbox">
+              <label class="form-check-label" for="checkIncludeSpecial">Include special
+                characters</label>
+            </div>
+          </div>
+
+        </form>
+        <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
+      </div>
+      <div class="card-footer">
+        <button id="generate" class="btn">Generate Password</button>
       </div>
     </div>
-    <script src="script.js"></script>
-  </body>
+  </div>
+  <script src="script.js"></script>
+</body>
+
 </html>

@@ -12,23 +12,12 @@ function writePassword() {
 
 function generatePassword() {
   var length,includeLower,includeUpper,includeNumeric,includeSpecial;
-  var includesValid = false;
-  var passwordCharacter,generatedPassword;
-  length = promptForLength();
 
-  while (!includesValid) {
-    includeLower = confirm("Would you like the password to contain lowercase letters?")
-    includeUpper = confirm("Would you like the password to contain uppercase letters?")
-    includeNumeric = confirm("Would you like the password to contain numbers?")
-    includeSpecial = confirm("Would you like the password to contain special characters?")
-
-    if (includeUpper === false && includeLower === false && includeNumeric === false && includeSpecial === false) {
-      alert("Please select at least one character option to include in the password.");
-    }
-    else {
-      includesValid = true;
-    }
-  }
+  length = document.querySelector("#inputPasswordLength").value;
+  includeLower = document.querySelector("#checkIncludeLower").checked;
+  includeUpper = document.querySelector("#checkIncludeUpper").checked;
+  includeNumeric = document.querySelector("#checkIncludeNumeric").checked;
+  includeSpecial = document.querySelector("#checkIncludeSpecial").checked;
 
   return generatePasswordInner(length,includeLower,includeUpper,includeNumeric,includeSpecial)
 
@@ -114,27 +103,6 @@ function generateSpecial() {
       break;
   }
   return character;
-}
-
-function promptForLength() {
-  var passwordLength = -1;
-  var done = false;
-
-  while (!done) {
-    passwordLength = prompt("How long should the password be? (8-128 characters)");
-    passwordLength = parseInt(passwordLength);
-
-    if (isNaN(passwordLength)) {
-      alert("Invalid length. Please enter a value between 8 and 128.");
-    }
-    else if(passwordLength<8||passwordLength>128) {
-      alert("Password length out of range. Please enter a value between 8 and 128.")
-    }
-    else {
-      done = true;
-    }
-  } 
-  return passwordLength;
 }
 
 // Add event listener to generate button

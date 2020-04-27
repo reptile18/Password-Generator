@@ -135,3 +135,16 @@ button[disabled] {
     font-size: 0.8rem;
   }
 }
+
+.divPasswordOptions {
+  margin-top: 20px;
+  margin-bottom:20px;
+}
+
+.divPasswordLength {
+  margin-top: 20px;
+}
+
+.form-check {
+  margin-top: 5px;
+}
