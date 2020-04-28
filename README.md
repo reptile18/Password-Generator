@@ -18,15 +18,15 @@ Simply download the files.
 
 Open Develop/index.html in a web browser.
 
-When the Generate Password button is clicked, the user is presented with a series of prompts.
-1. First, the user is prompted for a number of characters the password should be, between 8 and 128 characters.
-2. Next, they are presented with prompts for whether to include certain sets of characters.
+The user is presented with a series of inputs:
+1. First, the user enters the number of characters the password should be, between 8 and 128 characters.
+2. Next, they are presented with checkboxes for whether to include certain sets of characters.
 a. Lowercase letters
 b. Uppercase letters
 c. Numeric characters
 d. Special characters
 
-After all the prompts have been answered, the Your Secure Password text area will display the generated password.
+When the user clicks the Generate Password button, the text area will display the generated password.
 
 Note, if none of the options for #2 are selected, an error will display to the user and they will be prompted for all sets of characters again.
 

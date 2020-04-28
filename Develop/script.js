@@ -19,6 +19,14 @@ function generatePassword() {
   includeNumeric = document.querySelector("#checkIncludeNumeric").checked;
   includeSpecial = document.querySelector("#checkIncludeSpecial").checked;
 
+  if (includeLower === false && includeUpper === false && includeNumeric === false && includeSpecial === false) {
+    document.querySelector("#error").textContent = "Must include at least one option for characters";
+    return "";
+  }
+  else {
+    document.querySelector("#error").textContent ="";
+  }
+
   return generatePasswordInner(length,includeLower,includeUpper,includeNumeric,includeSpecial)
 
 }

@@ -148,3 +148,12 @@ button[disabled] {
 .form-check {
   margin-top: 5px;
 }
+
+.displayNone {
+  display: none;
+}
+
+.errorMessage {
+  font-size: 12px;
+  color: #dd0000;
+}
